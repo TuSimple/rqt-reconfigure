@@ -74,7 +74,7 @@ class NodeSelectorWidget(QWidget):
         #cmd = 'ros2 pkg prefix rqt_reconfigure'
         #ret = os.popen(cmd, 'r', 1).read().split()
 
-        ui_file = '/home/lingxinli/ros2_dynamic_reconfig/src/rqt_reconfigure/resource/node_selector.ui'
+        ui_file = '../resource/node_selector.ui'
         loadUi(ui_file, self)
 
         # List of the available nodes. Since the list should be updated over
