@@ -34,7 +34,7 @@
 
 from __future__ import division
 
-import rospkg
+#import rospkg
 import sys
 #from python_qt_binding.QtCore import *  
 from python_qt_binding.QtCore import Signal, QMargins
@@ -74,7 +74,7 @@ class ParamWidget(QWidget):
         self.setObjectName(self._TITLE_PLUGIN)
         self.setWindowTitle(self._TITLE_PLUGIN)
 
-        rp = rospkg.RosPack()
+        rp = 'rp'
 
         #TODO: .ui file needs to replace the GUI components declaration
         #            below. For unknown reason, referring to another .ui files
@@ -160,7 +160,6 @@ class ParamWidget(QWidget):
         return self.filter_lineedit.text()
 
     def _filter_key_changed(self):
-        print('_filter_key_changed')
         self._nodesel_widget.set_filter(self._text_filter)
 
     #TODO: This method should be integrated into common architecture. I just
@@ -168,6 +167,13 @@ class ParamWidget(QWidget):
     def emit_sysmsg(self, msg_str):
         self.sig_sysmsg.emit(msg_str)
 
+def main():
+    rclpy.init()
+    a = QApplication(sys.argv) 
+    w = ParamWidget("")
+    #w = QWidget()
+    w.show()
+    a.exec_()
 
 if __name__ == '__main__':
     # main should be used only for debug purpose.
@@ -177,10 +183,4 @@ if __name__ == '__main__':
     #main = Main()
     #sys.exit(main.main(sys.argv, standalone='rqt_reconfigure'))
 
-    rclpy.init()
-    a = QApplication(sys.argv) 
-    print('nonono')
-    w = ParamWidget("")
-    #w = QWidget()
-    w.show()
-    a.exec_()
+    main()

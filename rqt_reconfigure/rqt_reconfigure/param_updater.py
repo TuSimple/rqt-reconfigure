@@ -88,7 +88,6 @@ class ParamUpdater(threading.Thread):
             if (len(configs_tobe_updated) == 0):
                 continue
             #try:
-            print('1')
             self._reconf.update_configuration(configs_tobe_updated)
             #except Exception as ex:
                 #print('Could not update configs')

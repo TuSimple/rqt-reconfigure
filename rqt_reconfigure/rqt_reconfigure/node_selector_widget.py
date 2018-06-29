@@ -38,7 +38,7 @@ from collections import OrderedDict
 import os
 import time
 
-import dynamic_reconfigure as dyn_reconf
+import dynamic_reconfig as dyn_reconf
 from python_qt_binding import loadUi
 from python_qt_binding.QtCore import Qt, Signal
 try:
@@ -71,8 +71,10 @@ class NodeSelectorWidget(QWidget):
         self._parent = parent
         self.stretch = None
         self._signal_msg = signal_msg
+        #cmd = 'ros2 pkg prefix rqt_reconfigure'
+        #ret = os.popen(cmd, 'r', 1).read().split()
 
-        ui_file = '/home/xinliu/test/ros2_dynamic_reconfig/rqt_reconfigure/resource/node_selector.ui'
+        ui_file = '/home/lingxinli/ros2_dynamic_reconfig/src/rqt_reconfigure/resource/node_selector.ui'
         loadUi(ui_file, self)
 
         # List of the available nodes. Since the list should be updated over
@@ -304,7 +306,7 @@ class NodeSelectorWidget(QWidget):
         #except:
             #print("Reconfigure GUI cannot connect to master.")
             #raise e  # TODO Make sure 'raise' here returns or finalizes func.
-        print('_update_nodetree_pernode______',nodes)
+        #print('_update_nodetree_pernode______',nodes)
         if not nodes == self._nodes_previous:
             i_node_curr = 1
             num_nodes = len(nodes)
@@ -325,7 +327,7 @@ class NodeSelectorWidget(QWidget):
 
                 # Instantiate QStandardItem. Inside, dyn_reconf client will
                 # be generated too.
-                print('node_name_grn2222222222',node_name_grn)
+                #print('node_name_grn2222222222',node_name_grn)
                 treenodeitem_toplevel = TreenodeQstdItem(
                                 node_name_grn, TreenodeQstdItem.NODE_FULLPATH)
                 _treenode_names = treenodeitem_toplevel.get_treenode_names()
@@ -333,7 +335,7 @@ class NodeSelectorWidget(QWidget):
                 # Using OrderedDict here is a workaround for StdItemModel
                 # not returning corresponding item to index.
                 self._nodeitems[node_name_grn] = treenodeitem_toplevel
-                print('!!!!!!!!!!!!!1_treenode_names', _treenode_names)
+                #print('!!!!!!!!!!!!!1_treenode_names', _treenode_names)
                 self._add_children_treenode(treenodeitem_toplevel,
                                             self._rootitem, _treenode_names)
 
@@ -366,7 +368,7 @@ class NodeSelectorWidget(QWidget):
                                  order of params.
         """
         # TODO(Isaac): Consider moving this method to rqt_py_common.
-        print('_add_children_treenode',treenodeitem_toplevel,treenodeitem_parent,child_names_left)
+        #print('_add_children_treenode',treenodeitem_toplevel,treenodeitem_parent,child_names_left)
         name_currentnode = child_names_left.pop(0)
         grn_curr = treenodeitem_toplevel.get_raw_param_name()
         stditem_currentnode = TreenodeQstdItem(grn_curr,
@@ -427,13 +429,12 @@ class NodeSelectorWidget(QWidget):
                 self._nodeitems.pop(candidate_for_removal)
 
     def _refresh_nodes(self):
-        print('_refresh_nodes')
         self._prune_nodetree_pernode()
         self._update_nodetree_pernode()
 
     def close_node(self):
-        print(" in close_node")
         # TODO(Isaac) Figure out if dynamic_reconfigure needs to be closed.
+        print('in close node():')
 
     def set_filter(self, filter_):
         """

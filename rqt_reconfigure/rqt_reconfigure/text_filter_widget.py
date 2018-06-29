@@ -53,7 +53,9 @@ class TextFilterWidget(QWidget):
         :param display_list_args: empty list, ''list''
         """
         super(TextFilterWidget, self).__init__()
-        ui_file = os.path.join(rospack.get_path('rqt_reconfigure'), 'resource',
+        base_path = '/home/lingxinli/ros2_dynamic_reconfig/install/share/rqt_reconfigure'
+        base_path = '..'
+        ui_file = os.path.join(base_path, 'resource',
                                'text_filter_widget.ui')
         loadUi(ui_file, self)
         self.setObjectName('TextFilterWidget')

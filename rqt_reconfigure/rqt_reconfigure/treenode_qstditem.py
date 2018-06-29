@@ -37,7 +37,7 @@ from __future__ import division
 import threading
 import time
 
-from dynamic_reconfigure import client
+from dynamic_reconfig import client
 from python_qt_binding.QtCore import Qt
 from python_qt_binding.QtGui import QBrush, QStandardItem
 #import rospy
@@ -56,7 +56,7 @@ class ParamserverConnectThread(threading.Thread):
     def run(self):
         dynreconf_client = None
         try:
-            print('99999999999999999999',str(self._param_name_raw))
+            #print('99999999999999999999',str(self._param_name_raw))
             dynreconf_client = client(
                                        str(self._param_name_raw), timeout=5.0)
             print('ParamserverConnectThread dynreconf_client={}'. \

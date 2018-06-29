@@ -42,7 +42,7 @@ from param_editors import EditorWidget
 from param_groups import GroupWidget, find_cfg
 from param_updater import ParamUpdater
 
-from dynamic_reconfigure import (DynamicReconfigureParameterException,
+from dynamic_reconfig import (DynamicReconfigureParameterException,
                                  DynamicReconfigureCallbackException)
 #from rospy.service import ServiceException
 
@@ -62,7 +62,6 @@ class DynreconfClientWidget(GroupWidget):
         """
 
         group_desc = reconf.get_group_descriptions()
-        print('DynreconfClientWidget.group_desc=%s', group_desc)
         super(DynreconfClientWidget, self).__init__(ParamUpdater(reconf),
                                                     group_desc, node_name)
 
@@ -96,8 +95,6 @@ class DynreconfClientWidget(GroupWidget):
         return self._node_grn
 
     def config_callback(self, config):
-        print("wowowowowowow callback!!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!")
-        print(config)
         #TODO: Think about replacing callback architecture with signals.
 
         if config:
@@ -105,13 +102,11 @@ class DynreconfClientWidget(GroupWidget):
 
             names = [name for name, v in config.items()]
             # v isn't used but necessary to get key and put it into dict.
-            #print('config_callback name={} v={}'.format(name, v))
 
             for widget in self.editor_widgets:
                 if isinstance(widget, EditorWidget):
                     if widget.param_name in names:
-                        print('EDITOR widget.param_name=%s',
-                                       widget.param_name)
+                        #print('EDITOR widget.param_name=%s', widget.param_name)
                         widget.update_value(config[widget.param_name])
                 elif isinstance(widget, GroupWidget):
                     cfg = find_cfg(config, widget.param_name)
@@ -146,7 +141,6 @@ class DynreconfClientWidget(GroupWidget):
                 configuration.update(doc)
 
         try:
-            print('2')
             self.reconf.update_configuration(configuration)
         except ServiceException as e:
             rospy.logwarn('Call for reconfiguration wasn\'t successful because: %s', e.message)

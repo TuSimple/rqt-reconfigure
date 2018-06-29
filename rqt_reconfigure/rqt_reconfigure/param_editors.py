@@ -40,7 +40,7 @@ from python_qt_binding.QtCore import Signal, QLocale
 from python_qt_binding.QtGui import QDoubleValidator, QIntValidator
 from python_qt_binding.QtWidgets import QLabel, QMenu, QWidget
 from decimal import Decimal
-import rospkg
+#import rospkg
 #import rospy
 
 EDITOR_TYPES = {
@@ -52,15 +52,17 @@ EDITOR_TYPES = {
 
 # These .ui files are frequently loaded multiple times. Since file access
 # costs a lot, only load each file once.
-rp = rospkg.RosPack()
-ui_bool = os.path.join(rp.get_path('rqt_reconfigure'), 'resource',
+
+base_path = '/home/lingxinli/ros2_dynamic_reconfig/install/share/rqt_reconfigure'
+base_path = '..'
+ui_bool = os.path.join(base_path, 'resource',
                        'editor_bool.ui')
-ui_str = os.path.join(rp.get_path('rqt_reconfigure'), 'resource',
+ui_str = os.path.join(base_path, 'resource',
                       'editor_string.ui')
-ui_num = os.path.join(rp.get_path('rqt_reconfigure'), 'resource',
+ui_num = os.path.join(base_path, 'resource',
                       'editor_number.ui')
 ui_int = ui_num
-ui_enum = os.path.join(rp.get_path('rqt_reconfigure'), 'resource',
+ui_enum = os.path.join(base_path, 'resource',
                        'editor_enum.ui')
 
 
@@ -187,12 +189,11 @@ class StringEditor(EditorWidget):
 
     def update_value(self, value):
         super(StringEditor, self).update_value(value)
-        print('StringEditor update_value={}'.format(value))
+        #print('StringEditor update_value={}'.format(value))
         self._update_signal.emit(value)
 
     def edit_finished(self):
-        print('StringEditor edit_finished val={}'.format(
-                                              self._paramval_lineedit.text()))
+        #print('StringEditor edit_finished val={}'.format(self._paramval_lineedit.text()))
         self._update_paramserver(self._paramval_lineedit.text())
 
     def _set_to_empty(self):

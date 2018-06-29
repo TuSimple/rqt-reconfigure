@@ -35,7 +35,7 @@
 import os
 from collections import OrderedDict
 
-from  dynamic_reconfigure import client
+from  dynamic_reconfig import client
 from python_qt_binding import loadUi
 from python_qt_binding.QtCore import Qt, Signal
 from python_qt_binding.QtWidgets import QVBoxLayout, QWidget, QWidgetItem
@@ -59,7 +59,7 @@ class ParameditWidget(QWidget):
         """"""
         super(ParameditWidget, self).__init__()
 
-        ui_file = '/home/xinliu/test/ros2_dynamic_reconfig/rqt_reconfigure//resource/paramedit_pane.ui'
+        ui_file = '../resource/paramedit_pane.ui'
         loadUi(ui_file, self, {'ParameditWidget': ParameditWidget})
 
         self._dynreconf_clients = OrderedDict()
