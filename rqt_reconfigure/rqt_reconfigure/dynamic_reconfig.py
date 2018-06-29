@@ -55,6 +55,7 @@ class client:
         return 1
 
 def find_reconfigure_services():
+##调用命令 ros2 service list 来获取当前可调参节点。bug：节点关闭后，仍然会被查到，service未能完全关闭。
     cmd = 'ros2 service list'
     ret = os.popen(cmd, 'r', 1).read().split()
     servers = []
