@@ -30,7 +30,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from python_qt_binding.QtCore import QRegExp
+from ...python_qt_binding.QtCore import QRegExp
 from .base_filter import BaseFilter
 
 

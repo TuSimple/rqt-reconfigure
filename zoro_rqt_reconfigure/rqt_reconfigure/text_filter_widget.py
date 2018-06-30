@@ -57,6 +57,8 @@ class TextFilterWidget(QWidget):
         base_path = './'
         ui_file = os.path.join(base_path, 'resource',
                                'text_filter_widget.ui')
+        import zoro_rqt_reconfigure
+        ui_file = zoro_rqt_reconfigure.__path__[0] + "/zoro_resource/text_filter_widget.ui" 
         loadUi(ui_file, self)
         self.setObjectName('TextFilterWidget')
         # When data is changed it is stored in the parent filter

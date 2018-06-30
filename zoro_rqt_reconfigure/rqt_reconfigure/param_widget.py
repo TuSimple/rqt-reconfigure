@@ -37,8 +37,8 @@ from __future__ import division
 #import rospkg
 import sys
 #from python_qt_binding.QtCore import *  
-from python_qt_binding.QtCore import Signal, QMargins
-from python_qt_binding.QtWidgets import (QLabel, QHBoxLayout, QSplitter,
+from .python_qt_binding.QtCore import Signal, QMargins
+from .python_qt_binding.QtWidgets import (QLabel, QHBoxLayout, QSplitter,
                                          QVBoxLayout, QWidget, QApplication)
 
 from .node_selector_widget import NodeSelectorWidget

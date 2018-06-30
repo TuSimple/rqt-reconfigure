@@ -39,13 +39,13 @@ import os
 import time
 
 from . import dynamic_reconfig as dyn_reconf
-from python_qt_binding import loadUi
-from python_qt_binding.QtCore import Qt, Signal
+from .python_qt_binding import loadUi
+from .python_qt_binding.QtCore import Qt, Signal
 try:
     from .python_qt_binding.QtCore import QItemSelectionModel  # Qt 5
 except ImportError:
     from .python_qt_binding.QtGui import QItemSelectionModel  # Qt 4
-from python_qt_binding.QtWidgets import QHeaderView, QWidget
+from .python_qt_binding.QtWidgets import QHeaderView, QWidget
 
 
 from .rqt_py_common.rqt_ros_graph import RqtRosGraph
@@ -73,8 +73,8 @@ class NodeSelectorWidget(QWidget):
         self._signal_msg = signal_msg
         #cmd = 'ros2 pkg prefix rqt_reconfigure'
         #ret = os.popen(cmd, 'r', 1).read().split()
-
-        ui_file = './resource/node_selector.ui'
+        import  zoro_rqt_reconfigure
+        ui_file = zoro_rqt_reconfigure.__path__[0] + '/zoro_resource/node_selector.ui'
         loadUi(ui_file, self)
 
         # List of the available nodes. Since the list should be updated over
