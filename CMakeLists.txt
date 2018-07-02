@@ -29,8 +29,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(DIRECTORY zoro_rqt_reconfigure DESTINATION ${PYTHON_INSTALL_DIR}/${PROJECT_NAME})
 install(DIRECTORY zoro_resource DESTINATION ${PYTHON_INSTALL_DIR}/${PROJECT_NAME})
-install(FILES zoro_rqt.py DESTINATION lib/${PROJECT_NAME})
-install(FILES script/zoro_rqt_run  DESTINATION script)
+install(PROGRAMS script/zoro_rqt_run  DESTINATION lib/${PROJECT_NAME})
 
 ament_export_include_directories(zoro_resource)
 ament_export_include_directories(zoro_rqt_reconfigure)
