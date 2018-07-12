@@ -53,16 +53,17 @@ EDITOR_TYPES = {
 # These .ui files are frequently loaded multiple times. Since file access
 # costs a lot, only load each file once.
 
-import  zoro_rqt_reconfigure
-base_path = zoro_rqt_reconfigure.__path__[0] 
-ui_bool = os.path.join(base_path, 'zoro_resource',
+import  rqt_reconfigure
+rqt_path = rqt_reconfigure.__path__[0] 
+base_path = rqt_path[0:rqt_path.rfind('lib/python')] + "share/"
+ui_bool = os.path.join(base_path, 'rqt_resource',
                        'editor_bool.ui')
-ui_str = os.path.join(base_path, 'zoro_resource',
+ui_str = os.path.join(base_path, 'rqt_resource',
                       'editor_string.ui')
-ui_num = os.path.join(base_path, 'zoro_resource',
+ui_num = os.path.join(base_path, 'rqt_resource',
                       'editor_number.ui')
 ui_int = ui_num
-ui_enum = os.path.join(base_path, 'zoro_resource',
+ui_enum = os.path.join(base_path, 'rqt_resource',
                        'editor_enum.ui')
 
 

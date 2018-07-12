@@ -50,7 +50,7 @@
   <customwidget>
    <class>ParameditWidget</class>
    <extends>QWidget</extends>
-   <header>zoro_rqt_reconfigure.rqt_reconfigure.paramedit_widget</header>
+   <header>rqt_reconfigure.paramedit_widget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

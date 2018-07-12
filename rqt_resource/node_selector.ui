@@ -139,7 +139,7 @@
   <customwidget>
    <class>NodeSelectorWidget</class>
    <extends>QWidget</extends>
-   <header>zoro_rqt_reconfigure.rqt_reconfigure.node_selector_widget</header>
+   <header>rqt_reconfigure.node_selector_widget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -53,12 +53,10 @@ class TextFilterWidget(QWidget):
         :param display_list_args: empty list, ''list''
         """
         super(TextFilterWidget, self).__init__()
-        base_path = '/home/lingxinli/ros2_dynamic_reconfig/install/share/rqt_reconfigure'
-        base_path = './'
-        ui_file = os.path.join(base_path, 'resource',
-                               'text_filter_widget.ui')
-        import zoro_rqt_reconfigure
-        ui_file = zoro_rqt_reconfigure.__path__[0] + "/zoro_resource/text_filter_widget.ui" 
+        import  rqt_reconfigure
+        rqt_path = rqt_reconfigure.__path__[0]
+        base_path = rqt_path[0:rqt_path.rfind('lib/python')] + "share/"
+        ui_file = base_path + "/rqt_resource/text_filter_widget.ui" 
         loadUi(ui_file, self)
         self.setObjectName('TextFilterWidget')
         # When data is changed it is stored in the parent filter

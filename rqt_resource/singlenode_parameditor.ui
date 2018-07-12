@@ -475,7 +475,7 @@
   <customwidget>
    <class>GroupWidget</class>
    <extends>QWidget</extends>
-   <header>zoro_rqt_reconfigure.rqt_reconfigure.param_groups</header>
+   <header>rqt_reconfigure.param_groups</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -58,8 +58,10 @@ class ParameditWidget(QWidget):
     def __init__(self, rospack):
         """"""
         super(ParameditWidget, self).__init__()
-        import zoro_rqt_reconfigure
-        ui_file = zoro_rqt_reconfigure.__path__[0] + '/zoro_resource/paramedit_pane.ui'
+        import  rqt_reconfigure
+        rqt_path = rqt_reconfigure.__path__[0]
+        base_path = rqt_path[0:rqt_path.rfind('lib/python')] + "share/"
+        ui_file = base_path + 'rqt_resource/paramedit_pane.ui'
         loadUi(ui_file, self, {'ParameditWidget': ParameditWidget})
 
         self._dynreconf_clients = OrderedDict()

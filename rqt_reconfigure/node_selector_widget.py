@@ -73,8 +73,10 @@ class NodeSelectorWidget(QWidget):
         self._signal_msg = signal_msg
         #cmd = 'ros2 pkg prefix rqt_reconfigure'
         #ret = os.popen(cmd, 'r', 1).read().split()
-        import  zoro_rqt_reconfigure
-        ui_file = zoro_rqt_reconfigure.__path__[0] + '/zoro_resource/node_selector.ui'
+        import  rqt_reconfigure
+        rqt_path = rqt_reconfigure.__path__[0]
+        base_path = rqt_path[0:rqt_path.rfind('lib/python')] + "share/"
+        ui_file = base_path + 'rqt_resource/node_selector.ui'
         loadUi(ui_file, self)
 
         # List of the available nodes. Since the list should be updated over
