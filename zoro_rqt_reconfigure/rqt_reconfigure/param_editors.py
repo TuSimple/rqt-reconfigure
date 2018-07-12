@@ -53,16 +53,16 @@ EDITOR_TYPES = {
 # These .ui files are frequently loaded multiple times. Since file access
 # costs a lot, only load each file once.
 
-base_path = '/home/lingxinli/ros2_dynamic_reconfig/install/share/rqt_reconfigure'
-base_path = '..'
-ui_bool = os.path.join(base_path, 'resource',
+import  zoro_rqt_reconfigure
+base_path = zoro_rqt_reconfigure.__path__[0] 
+ui_bool = os.path.join(base_path, 'zoro_resource',
                        'editor_bool.ui')
-ui_str = os.path.join(base_path, 'resource',
+ui_str = os.path.join(base_path, 'zoro_resource',
                       'editor_string.ui')
-ui_num = os.path.join(base_path, 'resource',
+ui_num = os.path.join(base_path, 'zoro_resource',
                       'editor_number.ui')
 ui_int = ui_num
-ui_enum = os.path.join(base_path, 'resource',
+ui_enum = os.path.join(base_path, 'zoro_resource',
                        'editor_enum.ui')
 
 
