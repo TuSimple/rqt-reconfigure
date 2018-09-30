@@ -47,6 +47,8 @@ from .text_filter import TextFilter
 from .text_filter_widget import TextFilterWidget
 import rclpy
 
+import time
+
 class ParamWidget(QWidget):
     _TITLE_PLUGIN = 'Dynamic Reconfigure'
 
@@ -167,6 +169,7 @@ class ParamWidget(QWidget):
     def emit_sysmsg(self, msg_str):
         self.sig_sysmsg.emit(msg_str)
 
+
 def main():
     rclpy.init()
     a = QApplication(sys.argv) 
@@ -174,6 +177,7 @@ def main():
     #w = QWidget()
     w.show()
     a.exec_()
+    
 
 if __name__ == '__main__':
     # main should be used only for debug purpose.

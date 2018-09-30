@@ -48,6 +48,7 @@ from .dynreconf_client_widget import DynreconfClientWidget
 
 
 class ParamserverConnectThread(threading.Thread):
+
     def __init__(self, parent, param_name_raw):
         super(ParamserverConnectThread, self).__init__()
         self._parent = parent
@@ -75,6 +76,8 @@ class TreenodeQstdItem(ReadonlyItem):
     """
 
     NODE_FULLPATH = 1
+
+    __hash__ = object.__hash__
 
     def __init__(self, *args):
         """
