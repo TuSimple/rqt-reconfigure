@@ -57,15 +57,17 @@ class ParamUpdater(threading.Thread):
         self._reconf = reconf
         self._condition_variable = threading.Condition()
         self._configs_pending = {}
-        self._timestamp_last_pending = None
+        self._timestamp_last_pending = 0.0
         self._stop_flag = False
         #self._first_try = 
 
     def run(self):
-        _timestamp_last_commit = None
+        _timestamp_last_commit = 0.0
         #print(' ParamUpdater started')
 
         while not self._stop_flag:
+            #print ("!!!!!!!!!param_updater: commit_time", _timestamp_last_commit)
+            #print ("!!!!!!!!!param_updater: pending_time", self._timestamp_last_pending)
             try:
                 if _timestamp_last_commit >= self._timestamp_last_pending:
                     with self._condition_variable:
