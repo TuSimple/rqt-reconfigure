@@ -36,7 +36,6 @@ class client:
         for k in configs_tobe_updated.keys():
             in_dict['value.' + k] = configs_tobe_updated[k]
         values = dy.update_parameters(self.remote_name, in_dict)
-
         names = []
         for k in values.keys():
             if (k[0:5] == 'value'):

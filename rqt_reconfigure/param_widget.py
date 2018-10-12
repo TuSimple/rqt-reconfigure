@@ -49,6 +49,8 @@ import rclpy
 
 import time
 
+import zoro_utils
+
 class ParamWidget(QWidget):
     _TITLE_PLUGIN = 'Dynamic Reconfigure'
 
@@ -172,6 +174,7 @@ class ParamWidget(QWidget):
 
 def main():
     rclpy.init()
+    zoro_utils.zoro_init()
     a = QApplication(sys.argv) 
     w = ParamWidget("")
     #w = QWidget()
