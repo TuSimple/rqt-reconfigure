@@ -34,7 +34,7 @@
 
 import threading
 import time
-
+from zoro_utils import log as zlog
 
 
 class ParamUpdater(threading.Thread):
@@ -57,21 +57,21 @@ class ParamUpdater(threading.Thread):
         self._reconf = reconf
         self._condition_variable = threading.Condition()
         self._configs_pending = {}
-        self._timestamp_last_pending = None
+        self._timestamp_last_pending = 0.0
         self._stop_flag = False
         #self._first_try = 
 
     def run(self):
-        _timestamp_last_commit = None
+        _timestamp_last_commit = 0.0
         #print(' ParamUpdater started')
 
         while not self._stop_flag:
+            #print ("!!!!!!!!!param_updater: commit_time", _timestamp_last_commit)
+            #print ("!!!!!!!!!param_updater: pending_time", self._timestamp_last_pending)
             try:
                 if _timestamp_last_commit >= self._timestamp_last_pending:
                     with self._condition_variable:
-                        print(' ParamUpdater loop 1.1')
                         self._condition_variable.wait()
-                        print(' ParamUpdater loop 1.2')
             except:
                 fa = 1
                 #print(' ParamUpdater loop 1.3')
@@ -88,7 +88,9 @@ class ParamUpdater(threading.Thread):
             if (len(configs_tobe_updated) == 0):
                 continue
             #try:
+            zlog.log_info("rqt_reconfigure", " ParamUpdater loop 1.1")
             self._reconf.update_configuration(configs_tobe_updated)
+            zlog.log_info("rqt_reconfigure", " ParamUpdater loop 1.2")
             #except Exception as ex:
                 #print('Could not update configs')
 

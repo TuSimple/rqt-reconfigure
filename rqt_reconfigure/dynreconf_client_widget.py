@@ -143,11 +143,7 @@ class DynreconfClientWidget(GroupWidget):
         try:
             self.reconf.update_configuration(configuration)
         except ServiceException as e:
-            rospy.logwarn('Call for reconfiguration wasn\'t successful because: %s', e.message)
-        except DynamicReconfigureParameterException as e:
-            rospy.logwarn('Reconfiguration wasn\'t successful because: %s', e.message)
-        except DynamicReconfigureCallbackException as e:
-            rospy.logwarn('Reconfiguration wasn\'t successful because: %s', e.message)
+            raise e
 
     def close(self):
         self.reconf.close()
