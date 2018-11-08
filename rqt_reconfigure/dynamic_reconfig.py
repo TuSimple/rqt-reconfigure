@@ -54,7 +54,7 @@ class client:
         return 1
 
 def find_reconfigure_services():
-    cmd = 'ros2 service list'
+    cmd = 'ros2 service list | grep ^/DynamicReconfigure'
     ret = os.popen(cmd, 'r', 1).read().split()
     servers = []
     for s in ret:
