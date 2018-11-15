@@ -115,6 +115,7 @@ class ParameditWidget(QWidget):
             [self.palette().window().color().lighter(125),
              self.palette().window().color().darker(125)])
 
+
     def close(self):
         for dc in self._dynreconf_clients:
             # Clear out the old widget

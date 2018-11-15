@@ -47,6 +47,10 @@ from .text_filter import TextFilter
 from .text_filter_widget import TextFilterWidget
 import rclpy
 
+import time
+
+import zoro_utils
+
 class ParamWidget(QWidget):
     _TITLE_PLUGIN = 'Dynamic Reconfigure'
 
@@ -167,13 +171,16 @@ class ParamWidget(QWidget):
     def emit_sysmsg(self, msg_str):
         self.sig_sysmsg.emit(msg_str)
 
+
 def main():
     rclpy.init()
+    zoro_utils.zoro_init()
     a = QApplication(sys.argv) 
     w = ParamWidget("")
     #w = QWidget()
     w.show()
     a.exec_()
+    
 
 if __name__ == '__main__':
     # main should be used only for debug purpose.

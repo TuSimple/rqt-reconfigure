@@ -129,7 +129,6 @@ class NodeSelectorWidget(QWidget):
         # Note: self.selectionModel.currentChanged doesn't work to deselect
         # a treenode as expected. Need to use selectionChanged.
         self.selectionModel.selectionChanged.connect(self._selection_changed_slot)
-
     def node_deselected(self, grn):
         """
         Deselect the index that corresponds to the given GRN.
@@ -276,7 +275,7 @@ class NodeSelectorWidget(QWidget):
                 self._selection_selected(index_current, rosnode_name_selected)
             except Exception as e:
                 #TODO: print to sysmsg pane
-                err_msg = e.message + '. Connection to node=' + \
+                err_msg = str(e) + '. Connection to node=' + \
                           format(rosnode_name_selected) + ' failed'
                 self._signal_msg.emit(err_msg)
                 print(err_msg)
@@ -286,7 +285,7 @@ class NodeSelectorWidget(QWidget):
                 self._selection_deselected(index_current,
                                            rosnode_name_selected)
             except Exception as e:
-                print(e.message)
+                print(str(e))
                 #TODO: print to sysmsg pane
 
     def get_paramitems(self):
@@ -413,7 +412,6 @@ class NodeSelectorWidget(QWidget):
             print('set_name_______________',grn_curr, stditem.index())
             self._item_model.set_item_from_index(grn_curr, stditem.index())
 
-
     def _prune_nodetree_pernode(self):
         try:
             nodes = dyn_reconf.find_reconfigure_services()
@@ -422,13 +420,18 @@ class NodeSelectorWidget(QWidget):
             raise e  # TODO Make sure 'raise' here returns or finalizes func.
 
         for i in reversed(range(0, self._rootitem.rowCount())):
-            candidate_for_removal = self._rootitem.child(i).get_raw_param_name()
-            if not candidate_for_removal in nodes:
-                print('Removing {} because the server is no longer available.'.format(
-                                   candidate_for_removal))
-                self._nodeitems[candidate_for_removal].disconnect_param_server()
-                self._rootitem.removeRow(i)
-                self._nodeitems.pop(candidate_for_removal)
+            if self._rootitem.child(i) is None:
+                continue
+            try:
+                candidate_for_removal = self._rootitem.child(i).get_raw_param_name()
+                if not candidate_for_removal in nodes:
+                    print('Removing {} because the server is no longer available.'.format(
+                                       candidate_for_removal))
+                    self._nodeitems[candidate_for_removal].disconnect_param_server()
+                    self._rootitem.removeRow(i)
+                    self._nodeitems.pop(candidate_for_removal)
+            except:
+                continue
 
     def _refresh_nodes(self):
         self._prune_nodetree_pernode()
