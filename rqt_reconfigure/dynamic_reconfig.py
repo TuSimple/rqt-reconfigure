@@ -54,12 +54,11 @@ class client:
         return 1
 
 def find_reconfigure_services():
-    cmd = 'zoro service list | grep ^/DynamicReconfigure'
+    cmd = 'zoro node list -a | grep ^_DynamicReconfigure'
     ret = os.popen(cmd, 'r', 1).read().split()
     servers = []
     for s in ret:
-        if '/describe_parameters' == s[-20:] and s[:-20] != '/get_parameters_try_client':
-            servers.append(s[:-20])
+        servers.append("/" + s)
     return servers
 
 
