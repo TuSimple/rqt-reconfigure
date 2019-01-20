@@ -1,0 +1,3 @@
+[console_scripts]
+rqt_gui = rqt_reconfigure.param_widget:main
+

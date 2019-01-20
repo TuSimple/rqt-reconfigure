@@ -1,0 +1,189 @@
+Invoking command in '/root/rqt-reconfigure': PYTHONPATH=/root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base /root/rqt-reconfigure/build/rqt_reconfigure build --build-base /root/rqt-reconfigure/build/rqt_reconfigure/build install --prefix /root/rqt-reconfigure/install/rqt_reconfigure --record /root/rqt-reconfigure/build/rqt_reconfigure/install.log --single-version-externally-managed bdist_egg --dist-dir /root/rqt-reconfigure/build/rqt_reconfigure/dist
+running egg_info
+writing requirements to /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/requires.txt
+writing /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/PKG-INFO
+writing entry points to /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/entry_points.txt
+writing dependency_links to /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/dependency_links.txt
+writing top-level names to /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/top_level.txt
+reading manifest file '/root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/SOURCES.txt'
+writing manifest file '/root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/SOURCES.txt'
+running build
+running build_py
+copying rqt_reconfigure/rqt_py_common/layout_util.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common
+running install
+running install_lib
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/layout_util.py -> /root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages/rqt_reconfigure/rqt_py_common
+byte-compiling /root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages/rqt_reconfigure/rqt_py_common/layout_util.py to layout_util.cpython-35.pyc
+running install_data
+running install_egg_info
+removing '/root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages/rqt_reconfigure-0.4.0-py3.5.egg-info' (and everything under it)
+Copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info to /root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages/rqt_reconfigure-0.4.0-py3.5.egg-info
+running install_scripts
+Installing rqt_gui script to /root/rqt-reconfigure/install/rqt_reconfigure/lib/rqt_reconfigure
+writing list of installed files to '/root/rqt-reconfigure/build/rqt_reconfigure/install.log'
+running bdist_egg
+installing library code to /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg
+running install_lib
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/message_tree_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/layout_util.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/tree_model_completer.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/topic_dict.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/msg/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/msg/_Val.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/msg/_ArrayVal.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/ini_helper.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/data_items.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/rqt_ros_graph.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/rosaction.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/extended_combo_box.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/topic_tree_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/topic_completer.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/item_delegates.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/topic_helpers.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/rqt_roscomm_util.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/message_tree_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_py_common/plugin_container_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/node_selector_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/param_editors.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/text_filter_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/dynreconf_client_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/treenode_qstditem.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/message_proxy_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/custom_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/text_filter_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/time_filter_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/location_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/filter_collection.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/base_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/topic_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/custom_filter_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/list_filter_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/message_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/filter_wrapper_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/time_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/severity_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/filters/node_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/message_list.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/console_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/console.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/text_browse_dialog.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/message_data_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/message.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/rqt_console/console_settings_dialog.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/param_groups.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/treenode_status.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/paramedit_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/param_widget.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/filter_children_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/python_qt_binding/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/python_qt_binding/QtBindingHelper.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/python_qt_binding/binding_helper.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/param_plugin.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/dynamic_reconfig.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/param_updater.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/treenode_item_model.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_reconfigure/text_filter.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_resource
+copying /root/rqt-reconfigure/build/rqt_reconfigure/build/lib/rqt_resource/__init__.py -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_resource
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/message_tree_widget.py to message_tree_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/layout_util.py to layout_util.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/tree_model_completer.py to tree_model_completer.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/topic_dict.py to topic_dict.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg/_Val.py to _Val.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/msg/_ArrayVal.py to _ArrayVal.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/ini_helper.py to ini_helper.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/data_items.py to data_items.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/rqt_ros_graph.py to rqt_ros_graph.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/rosaction.py to rosaction.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/extended_combo_box.py to extended_combo_box.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/topic_tree_model.py to topic_tree_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/topic_completer.py to topic_completer.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/item_delegates.py to item_delegates.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/topic_helpers.py to topic_helpers.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/rqt_roscomm_util.py to rqt_roscomm_util.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/message_tree_model.py to message_tree_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_py_common/plugin_container_widget.py to plugin_container_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/node_selector_widget.py to node_selector_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/param_editors.py to param_editors.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/text_filter_widget.py to text_filter_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/dynreconf_client_widget.py to dynreconf_client_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/treenode_qstditem.py to treenode_qstditem.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/message_proxy_model.py to message_proxy_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/custom_filter.py to custom_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/text_filter_widget.py to text_filter_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/time_filter_widget.py to time_filter_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/location_filter.py to location_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/filter_collection.py to filter_collection.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/base_filter.py to base_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/topic_filter.py to topic_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/custom_filter_widget.py to custom_filter_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/list_filter_widget.py to list_filter_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/message_filter.py to message_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/filter_wrapper_widget.py to filter_wrapper_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/time_filter.py to time_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/severity_filter.py to severity_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/filters/node_filter.py to node_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/message_list.py to message_list.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/console_widget.py to console_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/console.py to console.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/text_browse_dialog.py to text_browse_dialog.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/message_data_model.py to message_data_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/message.py to message.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/rqt_console/console_settings_dialog.py to console_settings_dialog.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/param_groups.py to param_groups.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/treenode_status.py to treenode_status.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/paramedit_widget.py to paramedit_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/param_widget.py to param_widget.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/filter_children_model.py to filter_children_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding/__init__.py to __init__.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding/QtBindingHelper.py to QtBindingHelper.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/python_qt_binding/binding_helper.py to binding_helper.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/param_plugin.py to param_plugin.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/dynamic_reconfig.py to dynamic_reconfig.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/param_updater.py to param_updater.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/treenode_item_model.py to treenode_item_model.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_reconfigure/text_filter.py to text_filter.cpython-35.pyc
+byte-compiling /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/rqt_resource/__init__.py to __init__.cpython-35.pyc
+installing package data to /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg
+running install_data
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_reconfigure
+copying package.xml -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_reconfigure
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/editor_bool.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/editor_enum.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/editor_number.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/editor_string.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/node_selector.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/paramedit_pane.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/param_main.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/param_timeline.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/singlenode_parameditor.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+copying rqt_resource/text_filter_widget.ui -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/share/rqt_resource
+creating /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/PKG-INFO -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/SOURCES.txt -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/dependency_links.txt -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/entry_points.txt -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/requires.txt -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/top_level.txt -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+copying /root/rqt-reconfigure/build/rqt_reconfigure/rqt_reconfigure.egg-info/zip-safe -> /root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg/EGG-INFO
+creating '/root/rqt-reconfigure/build/rqt_reconfigure/dist/rqt_reconfigure-0.4.0-py3.5.egg' and adding '/root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg' to it
+removing '/root/rqt-reconfigure/build/rqt_reconfigure/build/bdist.linux-x86_64/egg' (and everything under it)
+Invoked command in '/root/rqt-reconfigure' returned '0': PYTHONPATH=/root/rqt-reconfigure/install/rqt_reconfigure/lib/python3.5/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base /root/rqt-reconfigure/build/rqt_reconfigure build --build-base /root/rqt-reconfigure/build/rqt_reconfigure/build install --prefix /root/rqt-reconfigure/install/rqt_reconfigure --record /root/rqt-reconfigure/build/rqt_reconfigure/install.log --single-version-externally-managed bdist_egg --dist-dir /root/rqt-reconfigure/build/rqt_reconfigure/dist

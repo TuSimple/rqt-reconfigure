@@ -101,7 +101,6 @@ class ParamWidget(QWidget):
         _hlayout_filter.addWidget(self.filterkey_label)
         _hlayout_filter.addWidget(self.filter_lineedit)
         _hlayout_filter_widget.setLayout(_hlayout_filter)
-        print(self.sig_sysmsg)
         self._nodesel_widget = NodeSelectorWidget(self, rp, self.sig_sysmsg)
         _vlayout_nodesel_side.addWidget(_hlayout_filter_widget)
         _vlayout_nodesel_side.addWidget(self._nodesel_widget)
@@ -121,6 +120,8 @@ class ParamWidget(QWidget):
         reconf_widget.sig_node_disabled_selected.connect(self._nodesel_widget.node_deselected)
         # Pass name of node to editor widget
         self._nodesel_widget.sig_node_selected.connect(reconf_widget.show_reconf)
+        #print(reconf_widget.show_reconf)
+
 
         if not node:
             title = self._TITLE_PLUGIN
@@ -132,11 +133,15 @@ class ParamWidget(QWidget):
         self._text_filter.filter_changed_signal.connect(
                                             self._filter_key_changed)
 
+
+        #for k in self._nodesel_widget.get_paramitems():
+        #    print(k, type(k), type(self._nodesel_widget))
+
         # Open any clients indicated from command line
         #self.sig_selected.connect(self._nodesel_widget.node_selected)
         '''
         for rn in [rospy.resolve_name(c) for c in context.argv()]:
-            print('rn',rn)
+            #print('rn',rn)
             if rn in self._nodesel_widget.get_paramitems():
                 self.sig_selected.emit(rn)
             else:
