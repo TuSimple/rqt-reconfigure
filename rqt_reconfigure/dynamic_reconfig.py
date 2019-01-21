@@ -28,7 +28,7 @@ class client:
             parameter['description'] = description['des.' + name]
 
             dic['parameters'].append(parameter)
-        print(dic)
+        #print(dic)
         return dic
 
     def update_configuration(self, configs_tobe_updated):

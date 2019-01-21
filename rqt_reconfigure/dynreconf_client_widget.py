@@ -110,8 +110,8 @@ class DynreconfClientWidget(GroupWidget):
                         widget.update_value(config[widget.param_name])
                 elif isinstance(widget, GroupWidget):
                     cfg = find_cfg(config, widget.param_name)
-                    print('GROUP widget.param_name=%s',
-                                   widget.param_name)
+                    #print('GROUP widget.param_name=%s',
+                    #               widget.param_name)
                     widget.update_group(cfg)
 
     def _handle_load_clicked(self):

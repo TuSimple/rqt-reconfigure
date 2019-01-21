@@ -343,22 +343,22 @@ def rosactionmain(mode=MODE_ACTION):
 #        elif command == 'md5':
 #            rosaction_cmd_md5(ext, full)
         elif command == '--help':
-            print(fullusage('ros' + mode[1:]))
+            #print(fullusage('ros' + mode[1:]))
             sys.exit(0)
         else:
-            print(fullusage('ros' + mode[1:]))
+            #print(fullusage('ros' + mode[1:]))
             sys.exit(getattr(os, 'EX_USAGE', 1))
     except KeyError as e:
-        print("Unknown message type: %s" % e, file=sys.stderr)
+        #print("Unknown message type: %s" % e, file=sys.stderr)
         sys.exit(getattr(os, 'EX_USAGE', 1))
     except rospkg.ResourceNotFound as e:
-        print("Invalid package: %s" % e, file=sys.stderr)
+        #print("Invalid package: %s" % e, file=sys.stderr)
         sys.exit(getattr(os, 'EX_USAGE', 1))
     except ValueError as e:
-        print("Invalid type: '%s'" % e, file=sys.stderr)
+        #print("Invalid type: '%s'" % e, file=sys.stderr)
         sys.exit(getattr(os, 'EX_USAGE', 1))
     except ROSActionException as e:
-        print(str(e), file=sys.stderr)
+        #print(str(e), file=sys.stderr)
         sys.exit(1)
     except KeyboardInterrupt:
         pass
@@ -764,7 +764,7 @@ def rosaction_cmd_show(mode, full):
         for topic, msg, t in rosbag.Bag(bag_file).read_messages(raw=True):
             datatype, _, _, _, pytype = msg
             if datatype == arg:
-                print(get_msg_text(datatype, options.raw, pytype._full_text))
+                #print(get_msg_text(datatype, options.raw, pytype._full_text))
                 break
     else:
         rospack = rospkg.RosPack()
@@ -772,7 +772,7 @@ def rosaction_cmd_show(mode, full):
             rosaction_debug(rospack, mode, arg, options.raw)
         else:
             for found in rosaction_search(rospack, mode, arg):
-                print("[%s]:" % found)
+                #print("[%s]:" % found)
                 rosaction_debug(rospack, mode, found, options.raw)
 
 def rosaction_md5(mode, type_):
@@ -795,7 +795,7 @@ def rosaction_cmd_md5(mode, full):
     if '/' in arg:  # package specified
         try:
             md5 = rosaction_md5(mode, arg)
-            print(md5)
+            #print(md5)
         except IOError:
             print("Cannot locate [%s]" % arg, file=sys.stderr)
     else:
@@ -804,7 +804,7 @@ def rosaction_cmd_md5(mode, full):
         for found in matches:
             try:
                 md5 = rosaction_md5(mode, found)
-                print("[%s]: %s" % (found, md5))
+                #print("[%s]: %s" % (found, md5))
             except IOError:
                 print("Cannot locate [%s]" % found, file=sys.stderr)
         if not matches:
@@ -819,7 +819,7 @@ def rosaction_cmd_package(mode, full):
     joinstring = '\n'
     if options.single_line:
         joinstring = ' '
-    print(joinstring.join(list_types(arg, mode=mode)))
+    #print(joinstring.join(list_types(arg, mode=mode)))
     
 def rosaction_cmd_packages(mode, full, argv=None):
     if argv is None:
@@ -835,7 +835,7 @@ def rosaction_cmd_packages(mode, full, argv=None):
         joinstring = ' '
     p1 = [p for p, _ in iterate_packages(rospack, mode)]
     p1.sort()
-    print(joinstring.join(p1))
+    #print(joinstring.join(p1))
 
 def rosaction_debug(rospack, mode, type_, raw=False):
     """

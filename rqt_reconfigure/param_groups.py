@@ -151,7 +151,7 @@ class GroupWidget(QWidget):
 
         self._create_node_widgets(config)
 
-        print('Groups node name={}'.format(nodename))
+        #print('Groups node name={}'.format(nodename))
         self.nodename_qlabel.setText(nodename)
 
         # Labels should not stretch
@@ -173,22 +173,22 @@ class GroupWidget(QWidget):
             if param['edit_method']:
                 widget = EnumEditor(self.updater, param)
             elif param['type'] in EDITOR_TYPES:
-                print('GroupWidget i_debug=%d param type =%s',
-                               i_debug,
-                               param['type'])
+                #print('GroupWidget i_debug=%d param type =%s',
+                #               i_debug,
+                #               param['type'])
                 editor_type = EDITOR_TYPES[param['type']]
                 widget = eval(editor_type)(self.updater, param)
 
             self.editor_widgets.append(widget)
             self._param_names.append(param['name'])
 
-            print('groups._create_node_widgets num editors=%d',
-                           i_debug)
+            #print('groups._create_node_widgets num editors=%d',
+            #               i_debug)
 
             end = time.time() * 1000
             time_elap = end - begin
-            print('ParamG editor={} loop=#{} Time={}msec'.format(
-                                              editor_type, i_debug, time_elap))
+            #print('ParamG editor={} loop=#{} Time={}msec'.format(
+            #                                  editor_type, i_debug, time_elap))
             i_debug += 1
 
         for name, group in config['groups'].items():
@@ -200,15 +200,15 @@ class GroupWidget(QWidget):
                 widget = eval(_GROUP_TYPES[''])(self.updater, group, self._toplevel_treenode_name)
 
             self.editor_widgets.append(widget)
-            print('groups._create_node_widgets ' +
-                           'name=%s',
-                           name)
+            #print('groups._create_node_widgets ' +
+            #               'name=%s',
+            #               name)
 
         for i, ed in enumerate(self.editor_widgets):
             ed.display(self.grid)
 
-        print('GroupWdgt._create_node_widgets len(editor_widgets)=%d',
-                       len(self.editor_widgets))
+        #print('GroupWdgt._create_node_widgets len(editor_widgets)=%d',
+        #               len(self.editor_widgets))
 
     def display(self, grid):
         grid.addRow(self)
@@ -241,7 +241,7 @@ class GroupWidget(QWidget):
         return self._param_names
 
     def _node_disable_bt_clicked(self):
-        print('param_gs _node_disable_bt_clicked')
+        #print('param_gs _node_disable_bt_clicked')
         self.sig_node_disabled_selected.emit(self._toplevel_treenode_name)
 
 

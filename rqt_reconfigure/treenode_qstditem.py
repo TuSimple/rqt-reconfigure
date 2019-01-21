@@ -60,8 +60,8 @@ class ParamserverConnectThread(threading.Thread):
             #print('99999999999999999999',str(self._param_name_raw))
             dynreconf_client = client(
                                        str(self._param_name_raw), timeout=5.0)
-            print('ParamserverConnectThread dynreconf_client={}'. \
-                          format(dynreconf_client))
+            #print('ParamserverConnectThread dynreconf_client={}'. \
+            #              format(dynreconf_client))
             self._parent.set_dynreconf_client(dynreconf_client)
         except Exception as e:
             raise type(e)(e.message +
@@ -112,9 +112,9 @@ class TreenodeQstdItem(ReadonlyItem):
         @param dynreconf_client: dynamic_reconfigure.client.Client
         """
         self._dynreconf_client = dynreconf_client
-        print('Qitem set dynreconf_client={} param={}'.format(
-                                                       self._dynreconf_client,
-                                                       self._param_name_raw))
+        #print('Qitem set dynreconf_client={} param={}'.format(
+        #                                               self._dynreconf_client,
+        #                                               self._param_name_raw))
 
     def clear_dynreconf_client(self):
         if self._dynreconf_client is not None:
@@ -130,12 +130,12 @@ class TreenodeQstdItem(ReadonlyItem):
         """
 
         if not self._dynreconfclient_widget:
-            print('get dynreconf_client={}'.format(
-                                                       self._dynreconf_client))
-            print('In get_dynreconf_widget 1')
+            #print('get dynreconf_client={}'.format(
+            #                                           self._dynreconf_client))
+            #print('In get_dynreconf_widget 1')
             if not self._dynreconf_client:
                 self.connect_param_server()
-            print('In get_dynreconf_widget 2')
+            #print('In get_dynreconf_widget 2')
 
             timeout = 3 * 100
             loop = 0
@@ -150,9 +150,9 @@ class TreenodeQstdItem(ReadonlyItem):
 
                 time.sleep(0.01)
                 loop += 1
-                print('In get_dynreconf_widget loop#{}'.format(loop))
+                #print('In get_dynreconf_widget loop#{}'.format(loop))
 
-            print('In get_dynreconf_widget 4')
+            #print('In get_dynreconf_widget 4')
             self._dynreconfclient_widget = DynreconfClientWidget(
                                                        self._dynreconf_client,
                                                        self._param_name_raw)
@@ -161,7 +161,7 @@ class TreenodeQstdItem(ReadonlyItem):
             # stop the param server thread we had.
             self._dynreconfclient_widget.destroyed.connect(self.clear_dynreconfclient_widget)
             self._dynreconfclient_widget.destroyed.connect(self.disconnect_param_server)
-            print('In get_dynreconf_widget 5')
+            #print('In get_dynreconf_widget 5')
 
         else:
             pass
@@ -182,8 +182,8 @@ class TreenodeQstdItem(ReadonlyItem):
         # If the treenode doesn't represent ROS Node, return None.
         with self._lock:
             if not self._is_rosnode:
-                print('connect_param_server failed due to missing ' +
-                             'ROS Node. Return with nothing.')
+                #print('connect_param_server failed due to missing ' +
+                #             'ROS Node. Return with nothing.')
                 return
 
             if not self._dynreconf_client:
@@ -218,8 +218,8 @@ class TreenodeQstdItem(ReadonlyItem):
             item = ReadonlyItem(paramname)
             item.setBackground(brush)
             paramnames_items.append(item)
-        print('enable_param_items len of paramnames={}'.format(
-                                                        len(paramnames_items)))
+        #print('enable_param_items len of paramnames={}'.format(
+        #                                                len(paramnames_items)))
         self.appendColumn(paramnames_items)
 
     def _set_param_name(self, param_name):
@@ -228,7 +228,7 @@ class TreenodeQstdItem(ReadonlyItem):
                            http://www.ros.org/wiki/Names).
                            Example: /paramname/subpara/subsubpara/...
         """
-        print('_set_param_name param_name={} '.format(param_name))
+        #print('_set_param_name param_name={} '.format(param_name))
 
         #  separate param_name by forward slash
         self._list_treenode_names = param_name.split('/')
@@ -238,9 +238,9 @@ class TreenodeQstdItem(ReadonlyItem):
 
         self._toplevel_treenode_name = self._list_treenode_names[0]
 
-        print('paramname={} nodename={} _list_params[-1]={}'.format(
-                       param_name, self._toplevel_treenode_name,
-                       self._list_treenode_names[-1]))
+        #print('paramname={} nodename={} _list_params[-1]={}'.format(
+        #               param_name, self._toplevel_treenode_name,
+        #               self._list_treenode_names[-1]))
 
     def get_param_name_toplv(self):
         """

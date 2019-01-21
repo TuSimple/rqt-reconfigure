@@ -88,7 +88,7 @@ class ParameditWidget(QWidget):
         @param dynreconf_widget:
         """
         node_grn = dynreconf_widget.get_node_grn()
-        print('ParameditWidget.show str(node_grn)=%s', str(node_grn))
+        #print('ParameditWidget.show str(node_grn)=%s', str(node_grn))
 
         if not node_grn in self._dynreconf_clients.keys():
             # Add dynreconf widget if there isn't already one.
@@ -139,7 +139,7 @@ class ParameditWidget(QWidget):
 
     def _remove_node(self, node_grn):
         try:
-            print(self._dynreconf_clients.keys())
+            #print(self._dynreconf_clients.keys())
             i = list(self._dynreconf_clients.keys()).index(node_grn)
         except ValueError:
             # ValueError occurring here means that the specified key is not
@@ -158,11 +158,11 @@ class ParameditWidget(QWidget):
                 item.widget().close()
         w = self._dynreconf_clients.pop(node_grn)
 
-        print('popped={} Len of left clients={}'.format(
-                                            w, len(self._dynreconf_clients)))
+        #print('popped={} Len of left clients={}'.format(
+        #                                    w, len(self._dynreconf_clients)))
 
     def _node_disabled(self, node_grn):
-        print('paramedit_w _node_disabled grn={}'.format(node_grn))
+        #print('paramedit_w _node_disabled grn={}'.format(node_grn))
 
         # Signal to notify other GUI components (eg. nodes tree pane) that
         # a node widget is disabled.
