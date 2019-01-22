@@ -36,6 +36,7 @@ from __future__ import division
 
 #import rospkg
 import sys
+import os
 #from python_qt_binding.QtCore import *  
 from .python_qt_binding.QtCore import Signal, QMargins
 from .python_qt_binding.QtWidgets import (QLabel, QHBoxLayout, QSplitter,
@@ -177,7 +178,16 @@ class ParamWidget(QWidget):
         self.sig_sysmsg.emit(msg_str)
 
 
+def deal_args():
+    args = sys.argv[1:]
+    for arg in args:
+        arg_list = arg.split(":=")
+        if arg_list[0] == 'ip' and len(arg_list) > 1:
+            os.environ['DISPLAY'] = arg_list[1] + ":0"
+
 def main():
+    deal_args()
+    
     rclpy.init()
     zoro_utils.zoro_init()
     a = QApplication(sys.argv) 
