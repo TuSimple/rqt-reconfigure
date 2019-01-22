@@ -68,6 +68,10 @@ class NodeSelectorWidget(QWidget):
         @type signal_msg: QtCore.Signal
         """
         super(NodeSelectorWidget, self).__init__()
+
+        self.node_map = dict()
+        self.node_map_reverse = dict()
+        
         self._parent = parent
         self.stretch = None
         self._signal_msg = signal_msg
@@ -129,6 +133,7 @@ class NodeSelectorWidget(QWidget):
         # Note: self.selectionModel.currentChanged doesn't work to deselect
         # a treenode as expected. Need to use selectionChanged.
         self.selectionModel.selectionChanged.connect(self._selection_changed_slot)
+
     def node_deselected(self, grn):
         """
         Deselect the index that corresponds to the given GRN.
@@ -141,13 +146,14 @@ class NodeSelectorWidget(QWidget):
         #print('NodeSelWidt node_deselected qindex={} data={}'.format(
         #                        qindex_tobe_deselected,
         #                        qindex_tobe_deselected.data(Qt.DisplayRole)))
-
+        
         # Obtain all indices currently selected.
         indexes_selected = self.selectionModel.selectedIndexes()
         for index in indexes_selected:
             grn_from_selectedindex = RqtRosGraph.get_upper_grn(index, '')
-            #print(' Compare given grn={} grn from selected={}'.format(
-            #                                      grn, grn_from_selectedindex))
+            grn_from_selectedindex = '/' + self.node_map_reverse[grn_from_selectedindex[1:]]
+        #    print(' Compare given grn={} grn from selected={}'.format(
+        #                                          grn, grn_from_selectedindex))
             # If GRN retrieved from selected index matches the given one.
             if grn == grn_from_selectedindex:
                 # Deselect the index.
@@ -247,7 +253,7 @@ class NodeSelectorWidget(QWidget):
         if not selected.indexes() and not deselected.indexes():
             #print('Nothing selected? Not ideal to reach here')
             return
-
+        
         index_current = None
         if selected.indexes():
             index_current = selected.indexes()[0]
@@ -263,6 +269,7 @@ class NodeSelectorWidget(QWidget):
 
         rosnode_name_selected = RqtRosGraph.get_upper_grn(index_current, '')
 
+        rosnode_name_selected = '/' + self.node_map_reverse[rosnode_name_selected[1:]]
         # If retrieved node name isn't in the list of all nodes.
         if not rosnode_name_selected in self._nodeitems.keys():
             # De-select the selected item.
@@ -295,10 +302,26 @@ class NodeSelectorWidget(QWidget):
         """
         return self._nodeitems
 
+    def get_simple_treenode_names(self, treenode_names):
+        treenode_name = '/'.join(treenode_names)
+        if treenode_name not in self.node_map:
+            simple_treenode_names = []
+            for name in treenode_names:
+                simple_name = name.split('_')[2:]
+                simple_name = '_'.join(simple_name)
+                simple_name = simple_name[:-32] + '[' + simple_name[-32:] + ']'
+                simple_treenode_names.append(simple_name)
+            simple_treenode_name = '/'.join(simple_treenode_names)
+            self.node_map[treenode_name] = simple_treenode_name
+            if simple_treenode_name in self.node_map_reverse:
+                raise Exception("simple treenode name repeat")
+            else:
+                self.node_map_reverse[simple_treenode_name] = treenode_name
+        return self.node_map[treenode_name].split('/')
+
     def _update_nodetree_pernode(self):
         """
         """
-
         # TODO(Isaac): 11/25/2012 dynamic_reconfigure only returns params that
         #             are associated with nodes. In order to handle independent
         #             params, different approach needs taken.
@@ -332,7 +355,7 @@ class NodeSelectorWidget(QWidget):
                 treenodeitem_toplevel = TreenodeQstdItem(
                                 node_name_grn, TreenodeQstdItem.NODE_FULLPATH)
                 _treenode_names = treenodeitem_toplevel.get_treenode_names()
-
+                _treenode_names = self.get_simple_treenode_names(_treenode_names)
                 # Using OrderedDict here is a workaround for StdItemModel
                 # not returning corresponding item to index.
                 self._nodeitems[node_name_grn] = treenodeitem_toplevel
